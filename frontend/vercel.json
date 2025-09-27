@@ -1,10 +1,10 @@
 {
   "env": {
-    "VITE_API_URL": "https://rrr-kwin.onrender.com/api"
+    "VITE_API_URL": "https://ai-mock-interview-1-x0st.onrender.com/api"
   },
   "build": {
     "env": {
-      "VITE_API_URL": "https://rrr-kwin.onrender.com/api"
+      "VITE_API_URL": "https://ai-mock-interview-1-x0st.onrender.com/api"
     }
   },
   "rewrites": [

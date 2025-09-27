@@ -7,13 +7,13 @@ const jwt = require('jsonwebtoken');
 const cors = require('cors');
 const nodemailer = require('nodemailer');
 const { GoogleGenerativeAI } = require("@google/generative-ai");
-const genAI = new GoogleGenerativeAI("AIzaSyD3jqEn-kANswHKNlWbGkNwakwyQU-Ls4o");
+const genAI = new GoogleGenerativeAI(`${process.env.GEN_AI}`);
 const model = genAI.getGenerativeModel({ model: "gemini-1.5-flash" });
 
 const app = express();
 app.use(express.json({ limit: '50mb' }));
 app.use(cors({
-  origin: true,
+  origin: "https://ai-mock-interview-euv4.vercel.app/",//true.
   credentials: true,
   methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
   allowedHeaders: ['Content-Type', 'Authorization', 'Accept']
