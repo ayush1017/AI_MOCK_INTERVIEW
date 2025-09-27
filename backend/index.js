@@ -8,7 +8,7 @@ const cors = require('cors');
 const nodemailer = require('nodemailer');
 const { GoogleGenerativeAI } = require("@google/generative-ai");
 const genAI = new GoogleGenerativeAI(process.env.GEN_AI);
-const model = genAI.getGenerativeModel({ model: "gemini-1.5-flash" });
+const model = genAI.getGenerativeModel({ model: "gemini-2.5-flash" });
 
 const app = express();
 app.use(express.json({ limit: '50mb' }));
@@ -23,6 +23,7 @@ app.use(cors({
 mongoose.connect(process.env.MONGO_URI)
   .then(() => console.log('Connected to MongoDB'))
   .catch(err => console.error('MongoDB connection error:', err));
+
 
 // User Schema
 const userSchema = new mongoose.Schema({
