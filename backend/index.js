@@ -7,7 +7,7 @@ const jwt = require('jsonwebtoken');
 const cors = require('cors');
 const nodemailer = require('nodemailer');
 const { GoogleGenerativeAI } = require("@google/generative-ai");
-const genAI = new GoogleGenerativeAI(`${process.env.GEN_AI}`);
+const genAI = new GoogleGenerativeAI(process.env.GEN_AI);
 const model = genAI.getGenerativeModel({ model: "gemini-1.5-flash" });
 
 const app = express();
