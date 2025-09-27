@@ -13,7 +13,7 @@ const model = genAI.getGenerativeModel({ model: "gemini-1.5-flash" });
 const app = express();
 app.use(express.json({ limit: '50mb' }));
 app.use(cors({
-  origin: "https://ai-mock-interview-4qpg.vercel.app/",//true.
+  origin: true,//true.
   credentials: true,
   methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
   allowedHeaders: ['Content-Type', 'Authorization', 'Accept']
